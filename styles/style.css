@@ -1,0 +1,235 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c; /* Fondo oscuro */
+    color: #f4f4f4; /* Texto claro */
+}
+
+header {
+    background-color: #282c34;
+    padding: 1rem;
+    color: white;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    color: #feda4a; /* Amarillo brillante */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+}
+
+
+/* Mensajes de carga */
+#loading-message {
+    font-style: italic;
+    color: #feda4a; /* Amarillo brillante */
+}
+
+/* Contenedor general para películas */
+#contenedor-peliculas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Espacio entre tarjetas */
+    justify-content: center;
+    padding: 2rem;
+    background-color: #292929; /* Fondo más oscuro */
+    border-radius: 15px;
+}
+
+/* Menú de pestañas fijo */
+.menu-pestanas {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: fixed; /* Fijar el menú en la parte superior */
+    top: 0; /* Pegado a la parte superior */
+    left: 0;
+    width: 100%; /* Asegurarse que ocupe todo el ancho */
+    z-index: 1000; /* Mantener por encima del contenido */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+/* Asegurarse que el contenido no quede oculto detrás del menú */
+body {
+    padding-top: 4.5rem; /* Ajusta según el alto del menú */
+}
+
+/* Estilos de las pestañas, como antes */
+.menu-pestanas ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.menu-pestanas ul li a {
+    text-decoration: none;
+    color: #feda4a; /* Amarillo brillante */
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-pestanas ul li a:hover {
+    background-color: #007BFF; /* Azul brillante */
+    color: white;
+}
+
+/* Tarjetas de películas */
+.tarjeta-pelicula {
+    background-color: #333; /* Fondo oscuro de la tarjeta */
+    border: 1px solid #444; /* Bordes definidos */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra más marcada */
+    padding: 1rem;
+    width: 300px; /* Ancho más amplio */
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-pelicula:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Imagen dentro de la tarjeta */
+.img-tarjeta {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; /* Recorta la imagen para que encaje */
+    border-radius: 10px 10px 0 0; /* Bordes redondeados solo arriba */
+    margin-bottom: 1rem;
+}
+
+/* Títulos de películas */
+.tarjeta-pelicula h3 {
+    font-size: 1.4rem;
+    color: #feda4a; /* Amarillo brillante */
+    margin-bottom: 1rem;
+}
+
+/* Botón de detalles */
+.btn-detalle {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-detalle:hover {
+    background-color: #0056b3;
+}
+
+/* Contenedor de cada categoría */
+.categoria {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #292929;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.categoria h3 {
+    color: #feda4a;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Grid de recursos */
+.grid-recursos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    list-style: none; /* Elimina los puntos */
+    padding: 0;
+}
+
+/* Tarjetas de recursos */
+.tarjeta-recurso {
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 200px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-recurso:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Imagen genérica en cada tarjeta */
+.img-recurso {
+    width: 100%;
+    height: 120px;
+    object-fit: contain; /* Asegura que la imagen no se deforme */
+    margin-bottom: 1rem;
+}
+
+/* Botón para ver más detalles */
+.tarjeta-recurso a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tarjeta-recurso a:hover {
+    background-color: #0056b3;
+}
+
+/* Títulos destacados */
+h2, h3 {
+    color: #feda4a;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .tarjeta-pelicula,
+    .tarjeta-recurso,
+    .menu-pestanas{
+        width: 100%; /* Para que las tarjetas ocupen todo el ancho */
+    }
+}
